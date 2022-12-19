@@ -9,7 +9,7 @@ export default function AutoBuy() {
     const data = {
       paymentPlan: "NORMAL",
       productId: "1711",
-      quantity: 1,
+      quantity: 2,
       stockId: "6949",
       subscriptionCycle: 1,
     };
@@ -69,7 +69,7 @@ export default function AutoBuy() {
                 {
                     "paymentPlan": "NORMAL",
                     "quantity": 2,
-                    "stockId": 6949,
+                    "stockId": 6892,
                     "subscriptionCycle": 1
                 }
             ],
