@@ -28,7 +28,7 @@ async function getPrime() {
         },
         body: JSON.stringify(data),
     })
-    return response
+    return response.json()
 }
 
 export default function handler(
@@ -37,12 +37,11 @@ export default function handler(
 ) {
     if(req.method === 'POST') {
         getPrime().then(data => {
-            data.text
-        }).then(res => {
-            console.log(res)
+            res.status(200).json(data)
         }).catch(e => {
             console.log(e)
         });
+    }else {
+        res.json({message: "Hello, World!"})
     }
-    res.json({message: "Hello, World!"})
 }
