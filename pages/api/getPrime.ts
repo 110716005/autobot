@@ -42,5 +42,5 @@ export default function handler(
             console.log(e)
         });
     }
-    res.status(500)
+    res.json({message: "Hello, World!"})
 }
