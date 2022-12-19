@@ -28,7 +28,7 @@ async function getPrime() {
         },
         body: JSON.stringify(data),
     })
-    return response.json()
+    return response
 }
 
 export default function handler(
