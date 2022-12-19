@@ -30,7 +30,8 @@ export default function AutoBuy() {
       "api/getPrime"
     const response = await fetch(url, {
       method: "POST",
-    }).then(res => res.json()).then(async data => {
+    }).then(res => res.text).then(async data => {
+        console.log(data)
         const url = 'https://12amber01.c2cbuy.com/api/checkout'
         const prime = data['prime']
         const payload = {
