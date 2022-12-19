@@ -69,13 +69,13 @@ export default function AutoBuy() {
                 {
                     "paymentPlan": "NORMAL",
                     "quantity": 2,
-                    "stockId": 6892, //change
+                    "stockId": 6030, //change
                     "subscriptionCycle": 1
                 }
             ],
             "cartItemIds": [
                 //change
-                "2312645"
+                "2312661"
             ]
         }
         const response = await fetch(url, {
