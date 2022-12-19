@@ -37,8 +37,9 @@ export default function handler(
 ) {
     if(req.method === 'POST') {
         getPrime().then(data => {
-            console.log(data)
-           
+            data.text
+        }).then(res => {
+            console.log(res)
         }).catch(e => {
             console.log(e)
         });
