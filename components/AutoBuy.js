@@ -89,7 +89,7 @@ export default function AutoBuy() {
             body: JSON.stringify(payload),
         }).then(resp => resp.json()).then(data => {
             const redirectUrl = data['data']['paymentUrl']
-            window.open(redirectUrl);
+            window.location.replace(redirectUrl);
         })
     });
   }
