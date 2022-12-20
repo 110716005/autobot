@@ -31,6 +31,8 @@ export default function AutoBuy() {
     const response = await fetch(url, {
       method: "POST",
     }).then(res => res.json()).then(async data => {
+
+        const mywin = window.open('about:blank');
         const url = 'https://12amber01.c2cbuy.com/api/checkout'
         const prime = data['prime']
         const payload = {
@@ -89,7 +91,7 @@ export default function AutoBuy() {
             body: JSON.stringify(payload),
         }).then(resp => resp.json()).then(data => {
             const redirectUrl = data['data']['paymentUrl']
-            window.location.replace(redirectUrl);
+            mywin.location = redirectUrl
         })
     });
   }
