@@ -91,7 +91,7 @@ export default function AutoBuy() {
             body: JSON.stringify(payload),
         }).then(resp => resp.json()).then(data => {
             const redirectUrl = data['data']['paymentUrl']
-            mywin.location = redirectUrl
+            mywin.location.href = redirectUrl
         })
     });
   }
