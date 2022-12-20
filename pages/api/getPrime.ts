@@ -19,7 +19,6 @@ async function getPrime() {
         mode: 'cors',
         headers: {
             "Content-Type": "application/json",
-            "Content-Length": "207",
             "Access-Control-Allow-Origin": 'https://js.tappaysdk.com',
             "x-api-key": "app_wYXHfg6byzN4Y7jpjmvvx8SOhmcRsNU6tg5cRRcDg4gWc6sNUrYWdh0mlsdO",
             'Access-Control-Allow-Methods': 'POST'
