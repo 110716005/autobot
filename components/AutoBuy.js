@@ -6,13 +6,13 @@ export default function AutoBuy() {
   const [bearToken, setBearToken] = useState("");
 
   async function addItemToCart() {
-    const data = {
+    const data = [{
       paymentPlan: "NORMAL",
-      productId: "1711",
+      productId: 1711,
       quantity: 2,
-      stockId: "6949",
+      stockId: 6949,
       subscriptionCycle: 1,
-    };
+    }];
     const url = "https://12amber01.c2cbuy.com/api/cart/items";
 
     const response = await fetch(url, {
@@ -31,10 +31,10 @@ export default function AutoBuy() {
     const response = await fetch(url, {
       method: "POST",
     }).then(res => res.json()).then(async data => {
-
         const mywin = window.open('about:blank');
         const url = 'https://12amber01.c2cbuy.com/api/checkout'
         const prime = data['prime']
+        console.log(prime)
         const payload = {
             "recipient": {
                 "name": "陳詩儀",
@@ -71,14 +71,11 @@ export default function AutoBuy() {
                 {
                     "paymentPlan": "NORMAL",
                     "quantity": 2,
-                    "stockId": 6030, //change
+                    "stockId": 6949, //change
                     "subscriptionCycle": 1
                 }
             ],
-            "cartItemIds": [
-                //change
-                "2312661"
-            ]
+            
         }
         const response = await fetch(url, {
             method: 'POST',
@@ -104,7 +101,7 @@ export default function AutoBuy() {
   return (
     <div className="flex flex-col">
       <div>
-        <label htmlFor="bear_token">Bear token</label>
+        <label htmlFor="bear_token">Bearer token</label>
         <input
           type="text"
           id="bear_token"
